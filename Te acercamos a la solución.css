@@ -1,0 +1,35 @@
+
+            .contenedor {
+                display: flex;
+                flex-direction: column;
+                max-width: 500px;
+                width: 100%;
+                margin: auto;
+            }
+    
+            header,
+            main,
+            footer {
+                /* Funciona como ALTO (height) */
+                flex-basis: 100px;
+            }
+    
+            main section {
+                display: flex;
+            }
+            #portfolio {
+                flex-wrap: wrap;
+            }
+    
+            section div {
+                /* Actua como ANCHO, SI el padre esta en dirección HORIZONTAL. PERO, SI el padre está en dirección VERTICAL, lo toma como ALTO */
+                flex-basis: 50%;
+    
+                flex-grow: 1;
+    
+                border: 1px solid;
+                padding: 5px;
+    
+            }
+    
+            

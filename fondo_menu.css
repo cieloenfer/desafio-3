@@ -1,0 +1,244 @@
+
+body {
+    background-image: url(./fondo.png);
+    background-position: center top;
+    background-size: 100% auto;
+}
+h1 {
+   text-align: center;
+   padding-top: 20px;
+   font-family:'Dancing Script',cursive;
+   
+}
+
+h1 {
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.banner{
+   width: 100%; 
+   height: 512px;
+
+}
+
+.menu{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #cf9c85;
+}
+
+.menu li {
+   float: left;
+}
+
+.menu li a {
+   display: block;
+   color:#a05c3f;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-family: 'Water Brush', cursive;
+}
+
+/* Change the link color to #111 (black) on hover */
+.menu li a:hover {
+   background-color:#cf9c85
+}
+
+.menu .active {
+   background-color: #a05c3f;
+}
+
+
+
+footer {
+   grid-area:pie;
+   display: flex;
+}
+
+
+footer ul {
+   list-style: none;
+   display: flex;
+}
+
+.container {  display: grid;
+   grid-template-columns: 0.3fr 2.8fr 0.1fr;
+   grid-template-rows: 0.6fr 0.9fr 1.3fr;
+   gap: 0ellos 0px;
+   grid-auto-flow: row;
+   grid-template-areas:
+     ". HEADER-CONTAINER ."
+     ". MAINCONTAINER ."
+     ". NUESTRA-MARCA .";
+ }
+ 
+ .MAINCONTAINER {  display: grid;
+   grid-template-columns: 1.7fr 0.1fr;
+   grid-template-rows: 1fr 2fr 0.1fr;
+   gap: 0px 0px;
+   grid-auto-flow: row;
+   grid-template-areas:
+     ". ."
+     ". ."
+     ". .";
+   grid-area: MAINCONTAINER;
+ }
+ 
+ .HEADER-CONTAINER {  display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   gap: 0px 0px;
+   grid-auto-flow: row;
+   grid-template-areas:
+     ". . ."
+     ". . ."
+     ". . .";
+   grid-area: HEADER-CONTAINER;
+ }
+ 
+ .NUESTRA-MARCA { grid-area: NUESTRA-MARCA; }
+
+ 
+        section {
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+        }
+
+        section div {
+            border: 1px solid
+        }
+
+        /* Los media queries van despues (de mayor a menor) si hemos comenzado con el código pensando en escritorio */
+
+        /* notebooks y escritorio */
+        @media (max-width: 1199px) { /* hasta 1199px */
+            section {
+                grid-template-columns: repeat(2, 50%);
+            }
+        }
+
+        @media (max-width: 767px) { /* hasta 767px */
+            section {
+                grid-template-columns: 100%;
+            }
+        }
+        
+        /* mobile first */
+        #contenedor {
+         display: grid;
+         grid-template-columns: 100%;
+         grid-template-areas:
+         "encabezado"
+         "principal"
+         "publicidad"
+         "pie"
+     }
+
+     header,
+     main,
+     aside,
+     footer {
+         border: 1px solid
+     }
+
+     header {
+         grid-area: encabezado;
+         
+     }
+     main {
+         grid-area: principal;
+     }
+     aside {
+         grid-area: publicidad;
+         display: none;
+      }
+      footer {
+          grid-area: pie
+      }
+
+
+     /* Los media queries van despues (de menor a mayor) */
+
+     /* tablets */
+     @media (min-width: 768px) {
+
+
+         /* DESDE 768px */
+         #contenedor {
+             grid-template-columns: repeat(2, 50%);
+             grid-template-rows: repeat(3, 100px);
+             grid-template-areas:
+                 "encabezado encabezado"
+                 "principal publicidad"
+                 "pie pie"
+             ;
+         }
+         aside {
+             display: block
+         }
+     }
+
+     @media only screen and (min-width: 768px) {
+        /* For desktop: */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+      }
+    
+
+     /* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
